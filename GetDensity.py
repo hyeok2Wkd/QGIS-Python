@@ -3,12 +3,10 @@ from encodings import utf_8
 import csv
 from datetime import datetime
 
-
-f = open('C:\capstone\FLOATING_PEOPLE\REG_FLOATING_PEOPLE.csv',
+f = open('./data/dst/REG_FLOATING_PEOPLE.csv',
          'r', encoding='euc-kr')
 
-
-f2 = open('C:\capstone\polygon포함.csv',
+f2 = open('./data/src/polygon포함.csv',
           'r', encoding='euc-kr')
 
 rdr = csv.reader(f)
@@ -45,7 +43,7 @@ col.append("TOT_REG_CD")
 for i in range(24):
     col.append(str(i) + "_density")
 
-dst = open('C:/capstone/FLOATING_PEOPLE/REG_PEOPLE_DENSITY.csv',
+dst = open('./data/dst/REG_PEOPLE_DENSITY.csv',
            'w', newline="", encoding='UTF-8')
 
 wr = csv.writer(dst)
