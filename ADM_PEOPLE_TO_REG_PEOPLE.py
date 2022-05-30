@@ -11,7 +11,7 @@ def csvWrite(result):    # csv write
     for i in range(24):
         col.append(str(i) + "_hour")
 
-    dst = open('C:/capstone/FLOATING_PEOPLE/REG_FLOATING_PEOPLE.csv',
+    dst = open('./data/dst/REG_FLOATING_PEOPLE.csv',
                'w', newline="", encoding='UTF-8')
     wr = csv.writer(dst)
     wr.writerow(col)
@@ -39,7 +39,7 @@ ADM_CD = ["11215710",
           "11215870"
           ]
 
-f = open('C:/capstone/ADM_PEOPLE/행정동별 서울생활인구(내국인)'+'.csv',
+f = open('./data/src/행정동별 서울생활인구(내국인)'+'.csv',
          'r', encoding='euc-kr')
 
 rdr = csv.reader(f)
@@ -73,7 +73,7 @@ datetime_date = datetime.strptime(date, '%Y-%m-%d')
 weekDay = datetime_date.weekday()
 weekDayName = weekDayList[weekDay]
 
-f = open('C:/capstone/REG_PEOPLE_RATIO/' + weekDayName + '_REG_PEOPLE_RATIO.csv',
+f = open('./data/src/' + weekDayName + '_REG_PEOPLE_RATIO.csv',
          'r', encoding='UTF-8')
 
 rdr = csv.reader(f)
