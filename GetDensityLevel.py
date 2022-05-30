@@ -4,7 +4,7 @@ import csv
 from operator import indexOf
 from datetime import datetime
 
-src = open('C:/capstone/FLOATING_PEOPLE/REG_PEOPLE_DENSITY.csv',
+src = open('./data/dst/REG_PEOPLE_DENSITY.csv',
            'r', encoding='UTF-8')
 
 rdr = csv.reader(src)
@@ -36,7 +36,7 @@ rows[len(rows)-1].append(5)
 rows[len(rows)-2].append(5)
 
 
-dst = open('C:/capstone/FLOATING_PEOPLE/REG_PEOPLE_DENSITY_'+str(time)+'_LEVEL.csv',
+dst = open('./data/dst/REG_PEOPLE_DENSITY_'+str(time)+'_LEVEL.csv',
            'w', newline="", encoding='UTF-8')
 
 col = []
